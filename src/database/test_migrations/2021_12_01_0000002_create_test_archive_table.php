@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTestTable extends Migration
+class CreateTestArchiveTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateTestTable extends Migration
      */
     public function up()
     {
-        Schema::create('tests', function (Blueprint $table) {
+        Schema::create('test_archives', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->default('Hello');
+            $table->unsignedInteger('original_id');
+            $table->string('name');
+            $table->dateTime('archived_at');
             $table->timestamps();
         });
     }

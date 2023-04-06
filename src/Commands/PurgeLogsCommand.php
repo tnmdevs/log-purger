@@ -7,12 +7,12 @@ use TNM\Utilities\LogPurger\Services\LogPurgerService;
 
 class PurgeLogsCommand extends Command
 {
-    protected $signature = 'utils:purge-logs';
+    protected $signature = 'utils:purge-logs {--limit=1000}';
 
     protected $description = 'Purge logs';
 
     public function handle(): int
     {
-        return (new LogPurgerService())->query();
+        return (new LogPurgerService($this->option('limit')))->query();
     }
 }
