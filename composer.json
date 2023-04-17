@@ -11,12 +11,12 @@
     ],
     "minimum-stability": "stable",
     "require-dev": {
-        "orchestra/testbench": "^5.0",
-        "laravel/framework": "^7.0",
+        "orchestra/testbench": "^8.0",
+        "laravel/framework": "^10.0",
         "phpunit/phpunit": "^9.5"
     },
     "require": {
-        "php": "^7.4 || ^8.0"
+        "php": "^7.4 || ^8.0 || ^8.1"
     },
     "autoload": {
         "psr-4": {
